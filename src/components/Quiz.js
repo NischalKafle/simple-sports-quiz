@@ -5,10 +5,9 @@ import { QuestionsData } from './QuestionsData'
 
 const Quiz = () => {
     const{score,setScore}=useContext(quizContext)
-    const[currQues,setCurrQues]=useState(0)
-    const[optionChosen,setOptionChosen]=useState('')
     const{gameSet,setGameset}=useContext(quizContext)
-
+    const{currQues,setCurrQues}=useContext(quizContext)
+    const{optionChosen,setOptionChosen}=useContext(quizContext)
     const nextQues=()=>{
             if (optionChosen === '') {
     alert('Please choose an option');

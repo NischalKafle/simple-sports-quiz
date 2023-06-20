@@ -1,5 +1,6 @@
 export const QuestionsData=[
-    {
+    {   
+        id:1,
         question:'Who won 2021 Champions League',
         optionA:'Real Madrid',
         optionB:'Chelsea',
@@ -7,7 +8,8 @@ export const QuestionsData=[
         optionD:'Inter Milan',
         answer:'optionB',
     },
-    {
+    {   
+        id:2,
         question:'Who won 2019 ICC Cricket World Cup',
         optionA:'New Zealand',
         optionB:'Australia',
@@ -15,7 +17,8 @@ export const QuestionsData=[
         optionD:'England',
         answer:'optionD'
     },
-    {
+    {   
+        id:3,
         question:'Who is the Premier League top Goal Scorer',
         optionA:'Alan Shearer',
         optionB:'Wayne Rooney',
@@ -23,7 +26,8 @@ export const QuestionsData=[
         optionD:'Frank Lampard',
         answer:'optionA',
     },
-    {
+    {   
+        id:4,
         question:'Which country has won the most number of FIFA World Cups',
         optionA:'Italy',
         optionB:'Germany',
