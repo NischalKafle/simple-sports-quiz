@@ -3,8 +3,12 @@ import { useContext } from 'react'
 import { quizContext } from './Contexts'
 import { QuestionsData } from './QuestionsData'
 const CheckAns = () => {
-    const{optionChosen}=useContext(quizContext)
-   
+    const{optionChosen,score,setScore,setGameset,setCurrQues}=useContext(quizContext)
+    const restartQuiz=()=>{
+        setCurrQues(0)
+        setGameset('quiz')
+        setScore(0)
+      }
   return (
     <div >
     {
@@ -33,6 +37,10 @@ const CheckAns = () => {
             )
         })
     }
+    <div style={{border:'2px solid black',margin:'20px',padding:'10px',backgroundColor:'gold'}}>
+    <h1>Your final score is: {score}/{QuestionsData.length}</h1>
+    </div>
+    <button class="btn btn-danger" style={{margin:'10px'}} onClick={restartQuiz}>Restart Quiz</button>
     </div>
   )
 }

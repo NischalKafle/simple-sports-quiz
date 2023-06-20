@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { quizContext } from './Contexts'
 const EndPage = () => {
   const{score,setScore,setGameset,setCurrQues}=useContext(quizContext)
-  const restartQuiz=()=>{
+   const restartQuiz=()=>{
     setCurrQues(0)
     setGameset('quiz')
     setScore(0)
