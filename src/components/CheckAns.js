@@ -4,13 +4,17 @@ import { quizContext } from './Contexts';
 import { QuestionsData } from './QuestionsData';
 
 const CheckAns = () => {
-  const { optionChosen } = useContext(quizContext);
-
+  const { optionChosen,setGameset,setCurrQues,setScore,setOptionChosen,score } = useContext(quizContext);
+  const RestartQuiz=()=>{
+    setCurrQues(0)
+    setScore(0)
+    setOptionChosen([])
+    setGameset('quiz')
+  }
   return (
     <div>
       {QuestionsData.map((ques, index) => {
         const isAnswerCorrect = optionChosen[index] === ques.answer;
-
         return (
           <div
             key={ques.id}
@@ -36,6 +40,17 @@ const CheckAns = () => {
           </div>
         );
       })}
+      <div
+      style={{
+        border: '2px solid black',
+        margin: '20px',
+        padding: '10px',
+        backgroundColor: 'silver',
+      }}
+    >
+      <h1>Your final Score is: {score}</h1>
+    </div>
+      <button className="btn btn-danger" style={{margin:'10px'}} onClick={RestartQuiz}>Restart Quiz</button>
     </div>
   );
 };
