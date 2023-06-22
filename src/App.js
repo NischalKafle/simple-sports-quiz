@@ -9,7 +9,7 @@ function App() {
   const[gameset,setGameset]=useState('menu')
   const[score,setScore]=useState(0)
   const[currQues,setCurrQues]=useState(0)
-  const[optionChosen,setOptionChosen]=useState('')
+  const[optionChosen,setOptionChosen]=useState([])
   return (
     <div className="App">
     <quizContext.Provider value={{gameset,setGameset,score,setScore,currQues,setCurrQues,optionChosen,setOptionChosen}}>
