@@ -33,7 +33,7 @@ const Quiz = () => {
     if (QuestionsData[currQues].answer === optionChosen[currQues]){
       setScore(score + 1);
     }
-    
+
     setGameset('end');
   };
 
@@ -45,7 +45,7 @@ const Quiz = () => {
 
   return (
     <div style={{ backgroundColor: 'gold', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <div>
+    <div>
         <h1 style={{ color: 'black', fontWeight: 'bold' }}>{QuestionsData[currQues].question}</h1>
         <div style={{ display: 'flex', color: 'white', fontWeight: 'bold', flexDirection: 'column', margin: 'auto', alignItems: 'center' }}>
           <button className="btn btn-success" style={{ margin: '5px' }} onClick={() => handleOptionSelect('optionA')}>
@@ -62,10 +62,10 @@ const Quiz = () => {
           </button>
         </div>
         {currQues === QuestionsData.length - 1 ? (
-          <>
+              <>
             <button style={{ margin: '20px' }} className="btn btn-primary" onClick={quesEnd}>Finish Quiz</button>
             <button style={{ margin: '20px' }} className="btn btn-danger" onClick={prevQues}>Go Back</button>
-          </>
+              </>
         ) : (
           <div>
             <button style={{ margin: '20px' }} className="btn btn-primary" onClick={nextQues}>Next Question</button>
